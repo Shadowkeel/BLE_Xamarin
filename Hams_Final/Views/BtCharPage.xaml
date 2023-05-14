@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hams_Final.Views.BtCharPage"
+              Title="Characteristics"
+             Visual="Material"
+             >
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            
+            <Label Text="Selected Bluetooth Device"
+                   x:Name="bleDevice"/>
+            <Label Text="Selected BLE Service"
+                   x:Name="bleService"/>
+            
+            <Label Text="Characteristics"/>
+            <ListView x:Name="foundBleChars"
+                      ItemTapped="FoundBleChars_ItemTapped" />
+         
+            <Label Text="No Characteristic selected"
+                   x:Name="bleChar"/>
+         
+            <ScrollView VerticalOptions="EndAndExpand">
+                <Label x:Name="Output"
+                       TextColor="DarkBlue"
+                       VerticalOptions="EndAndExpand" />
+            </ScrollView>
+           
+            <Label Text=""
+                   TextColor="DarkRed"
+                   x:Name="ErrorLabel"/>
+           
+            <Entry x:Name="CommandTxt"
+                   Text="ATZ" />
+           
+            <StackLayout Margin="0,0,0,0">
+                <StackLayout Orientation="Horizontal" x:Name="ScanButton">
+                    <Button Text="Receive" Clicked="ReceiveCommandButton_Clicked"/>
+                    <Button Text="Send" Clicked="SendCommandButton_Clicked"/>
+                    <Button Text="Register" Clicked="RegisterCommandButton_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
