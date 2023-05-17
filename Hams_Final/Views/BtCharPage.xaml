@@ -38,6 +38,7 @@
                     <Button Text="Receive" Clicked="ReceiveCommandButton_Clicked"/>
                     <Button Text="Send" Clicked="SendCommandButton_Clicked"/>
                     <Button Text="Register" Clicked="RegisterCommandButton_Clicked"/>
+                    <Button Text="GetConfig" Clicked="GetConfigCommandButton_Clicked"/>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
